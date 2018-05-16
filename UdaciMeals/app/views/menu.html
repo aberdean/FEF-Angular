@@ -7,6 +7,8 @@
 			<p>Rating: {{item.rating}} <span ng-if="item.rating > 4.0" 
 				ng-class="{highlight: item.rating > 4.5}"> - People
 				love this item!</span>
+				<button ng-click="menu.increment(item)">+</button>
+				<button ng-click="menu.decrement(item)">-</button>
 			</p>
 			<p>
 				<textarea ng-model="item.newReview" name="item.review" rows="3"
