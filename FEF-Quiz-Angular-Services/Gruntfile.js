@@ -9,7 +9,7 @@
 
 module.exports = function (grunt) {
 
-  var var serveStatic = require('serve-static');
+  var serveStatic = require('serve-static');
 
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
