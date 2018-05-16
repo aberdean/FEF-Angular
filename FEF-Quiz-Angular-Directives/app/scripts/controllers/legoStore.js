@@ -3,7 +3,10 @@
 angular.module('directivesQuizApp')
   .controller('legoStore', function() {
     this.name = 'Udaci-Block Superstore';
-    this.brickColors = ['Black', 'Red', 'Rust', 'Salmon', 'Dark Tan', 'Earth Orange', 'Orange', 'Yellow', 'Lime', 'Green', 'Aqua', 'Blue', 'Dark Azure', 'Violet', 'Magenta', 'Bright Pink'];
+    this.brickColors = ['Black', 'Red', 'Rust', 'Salmon', 'Dark Tan',
+                        'Earth Orange', 'Orange', 'Yellow', 'Lime', 'Green',
+                        'Aqua', 'Blue', 'Dark Azure', 'Violet', 'Magenta',
+                        'Bright Pink'];
     this.bricks = {
       Red: {
         '1x1': {
@@ -47,5 +50,13 @@ angular.module('directivesQuizApp')
           price: 0.08
         }
       }
+    };
+
+    this.buy = function(color, size) {
+      this.bricks[color][size].quantity -= 1;
+    };
+
+    this.return = function(color, size) {
+      this.bricks[color][size].quantity += 1;
     };
   });
