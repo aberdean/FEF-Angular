@@ -30,6 +30,12 @@ body {
   padding-bottom: 19px;
 }
 
+/* Highlight menu item */
+.highlight {
+  color: green;
+  font-style: italic;
+}
+
 /* Custom page footer */
 .footer {
   padding-top: 19px;
