@@ -49,7 +49,10 @@
     <div class="container">
       <div ng-include="'views/order.html'" ng-controller="OrderCtrl as order">
       </div>
-      <div ng-include="'views/menu.html'" ng-controller="MenuCtrl as menu"></div>
+      <div ui-view></div>
+      <!-- TODO: The menu view should be deleted after solving the problem that requires the item name link to be clicked twice to show the item content. Also, removing this now will cause the main page not to display the menu.-->
+      <div ng-include="'views/menu.html'" ng-controller="MenuCtrl as menu">
+      </div>
     </div>
 
     <div class="footer">
@@ -63,6 +66,7 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -72,6 +76,7 @@
     <script src="scripts/services/foodfinder.js"></script>
     <script src="scripts/services/ordermanager.js"></script>
     <script src="scripts/controllers/order.js"></script>
+    <script src="scripts/controllers/item.js"></script>
     <!-- endbuild -->
 </body>
 </html>
